@@ -36,7 +36,7 @@ class Var:
     BUTTON_TITLE = config("BUTTON_TITLE", "WIBU JUGA MANUSIA")
     # Set DISABLE_BUTTON to True, to disable that Button.
     CUSTOM_BUTTON = config("CUSTOM_BUTTON", default=None)
-    DISABLE_BUTTON = config("DISABLE_BUTTON", default=True)
+    DISABLE_BUTTON = config("DISABLE_BUTTON", default=True, cast=bool)
 
     # Media Url, to be send with '/start' message.
     START_MEDIA = config("START_MEDIA", "TgTwitterStreamer/assets/START.webp")
@@ -58,8 +58,8 @@ class Var:
     MUST_EXCLUDE = config("MUST_EXCLUDE", default=None)
 
     # Automations
-    AUTO_LIKE = config("AUTO_LIKE", default=True)
-    AUTO_RETWEET = config("AUTO_RETWEET", default=True)
+    AUTO_LIKE = config("AUTO_LIKE", default=True, cast=bool)
+    AUTO_RETWEET = config("AUTO_RETWEET", default=True, cast=bool)
     AUTO_PIN = config("AUTO_PIN", default=False, cast=bool)
 
     _filter_level = None
