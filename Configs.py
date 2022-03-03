@@ -49,7 +49,7 @@ class Var:
     # Whether should take messages, which are reply to other post.
     TAKE_REPLIES = config("TAKE_REPLIES", default=False, cast=bool)
     # Whether to Take Retweets or not.
-    TAKE_RETWEETS = config("TAKE_RETWEETS", default=True, cast=bool)
+    TAKE_RETWEETS = config("TAKE_RETWEETS", default=False, cast=bool)
     # Whether to take replies on post of user filled in TRACK_USERS.
     TAKE_OTHERS_REPLY = config("TAKE_OTHERS_REPLY", default=False, cast=bool)
 
@@ -58,8 +58,8 @@ class Var:
     MUST_EXCLUDE = config("MUST_EXCLUDE", default=None)
 
     # Automations
-    AUTO_LIKE = config("AUTO_LIKE", default=True, cast=bool)
-    AUTO_RETWEET = config("AUTO_RETWEET", default=True, cast=bool)
+    AUTO_LIKE = config("AUTO_LIKE", default=True)
+    AUTO_RETWEET = config("AUTO_RETWEET", default=True)
     AUTO_PIN = config("AUTO_PIN", default=False, cast=bool)
 
     _filter_level = None
